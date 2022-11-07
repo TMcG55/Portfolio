@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Layouts</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+<body>
+
+
+    <!-- NAVBAR container -->
+    <div class="title-bar">
+        <div class="name">
+            Tom McGuinness
+        </div>
+        <div class="title">
+            Engineering Graduate
+        </div>
+        <div class="nav">
+            <div class="homer"><button class="homer-button">Home</button> </div>
+            <div class="skills"><button class="skills-button">Skills</button></div>
+            <div class="exp"><button class="exp-button">Experience</button></div>
+            <div class="me"><button class="me-button">Me</button></div>
+        </div>
+    </div>
+
+    <div class="pics">
+        <div class="A">
+            <div class="slide 1">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img src="IMG_1672.jpg" style="width:100%;height: 600px; object-fit: cover;">
+                </div>
+    
+                <div class="mySlides fade">
+                    <img src="IMG_4391.jpg" style="width:100%;height: 500px; object-fit: cover;">
+                </div>
+    
+                <div class="mySlides fade">
+                    <img src="IMG-20181202-WA0004.jpg" style="width:100%;height: 500px; object-fit: cover;">
+    
+                </div>
+    
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+            </div>
+    
+            <div class="caption A">
+                <p>A</p>
+            </div>
+        </div>
+        <div class="B">
+            <div class="slide 2">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img src="IMG_1672.jpg" style="width:100%;height: 600px; object-fit: cover;">
+                </div>
+    
+                <div class="mySlides fade">
+                    <img src="IMG_4391.jpg" style="width:100%;height: 500px; object-fit: cover;">
+                </div>
+    
+                <div class="mySlides fade">
+                    <img src="IMG-20181202-WA0004.jpg" style="width:100%;height: 500px; object-fit: cover;">
+    
+                </div>
+    
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+            </div>
+    
+            <div class="caption B">
+                <p>B</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+
+</html>
