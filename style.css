@@ -25,13 +25,14 @@ body {
 .title {
     width: 33%;
     font-size: 40px;
+    max-height: 60px;
 }
 
-.title{
+.title {
     text-align: center;
 }
 
-.name{
+.name {
     text-align: left;
     padding-left: 50px;
 }
@@ -63,7 +64,7 @@ body {
     text-align: center;
     border: none;
     cursor: pointer;
-    
+
     height: 40px;
     transition: opacity 0.15s;
     vertical-align: top;
@@ -89,106 +90,177 @@ body {
 }
 
 
-.pics{
-    background-color: gray;
+.pics {
+    background-color: rgb(13,13,13);
     display: flex;
     top: 100px;
-    left: 2%;
+    left: 0;
     right: 2%;
     height: 600px;
     width: 100%;
     position: fixed;
-    justify-content: right;
+    justify-content: space-between;
+}
+.spacer{
+    display: flex;
+    width: 1%;
 }
 
-
-
-/* Slideshow container */
-/*----------------------*/
-.A,.B,.C {
-    top: 0px;
-    bottom: 0;
-    left: 75px;
-    display: block;
-    width: 30%;
-    height: 500px;
-    position: absolute;
-    
+/* Set up images */
+.A,
+.B,
+.C {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 600px;
     overflow: hidden;
 }
 
 
 
-/* Hide the images by default */
-.mySlides {
+
+
+
+.slides input{
     display: none;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 260px;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-.captions{
+.slides{
     display: flex;
+}
+
+.image-crop{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.slide{
+    transition: 1s;
+    width: 500px;
+}
+
+/* control the images manually */
+
+.nav-manual{
     position: absolute;
-    top: 525px;
-    background-color: rgb(154, 194, 204);
-    color: white;
+    width: 500px;
+    margin-top: 475px;
+    display: flex;
+    justify-content: center;
+    
 }
 
-/* ------------------------------------------------------------------------------- */
-/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
-/* ------------------------------------------------------------------------------- */
-
-.B{
-    left: 750px;
-    background-color: rgb(188, 171, 226);
-}
-.A{
-    background-color: rgb(188, 171, 226);
+.manual-btn{
+    border: 3px solid rgb(13, 13, 13);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
 }
 
-
-
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
+.manual-btn:not(:last-child){
+    margin-right: 10px;
 }
+
+.manual-btn:hover{
+    background-color: rgb(13, 13, 13)white;
+}
+
+#radioA1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radioA2:checked ~ .first{
+    margin-left: -33.33%;
+}
+
+#radioA3:checked ~ .first{
+    margin-left: -66.66%;
+}
+
+/* control the images automatically */
+.nav-auto{
+    position: absolute;
+    width: 500px;
+    margin-top: 475px;
+    display: flex;
+    justify-content: center;
+}
+
+.auto-btnA1,
+.auto-btnA2,
+.auto-btnA3{
+    border: 3px solid rgb(13, 13, 13);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.auto-btnA1,
+.auto-btnA2{
+    margin-right: 10px;
+}
+
+
+#radioA1:checked ~ .nav-auto .auto-btnA1{
+    background: rgb(13, 13, 13);
+}
+
+#radioA2:checked ~ .nav-auto .auto-btnA2{
+    background: rgb(13, 13, 13);
+}
+
+#radioA3:checked ~ .nav-auto .auto-btnA3{
+    background: rgb(13, 13, 13);
+}
+
+#radioB1:checked ~ .nav-auto .auto-btnB1{
+    background: rgb(13, 13, 13);
+}
+
+#radioB2:checked ~ .nav-auto .auto-btnB2{
+    background: rgb(13, 13, 13);
+}
+
+#radioB3:checked ~ .nav-auto .auto-btnB3{
+    background: rgb(13, 13, 13);
+}
+
+#radioC1:checked ~ .nav-auto .auto-btnC1{
+    background: rgb(13, 13, 13);
+}
+
+#radioC2:checked ~ .nav-auto .auto-btnC2{
+    background: rgb(13, 13, 13);
+}
+
+#radioC3:checked ~ .nav-auto .auto-btnC3{
+    background: rgb(13, 13, 13);
+}
+
+
+.subtitle{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    top:  510px;
+    font-size: 30px;
+    font-weight: 400;
+    color: rgb(154, 194, 204);
+}
+
+.subpara{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    width: 500px;
+    top:  575px;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(154, 194, 204);
+}
+
